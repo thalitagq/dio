@@ -1,0 +1,120 @@
+:root{
+  --pink: #E73C70;
+  --white: #E8E8E8;
+  --roxo: #600060;
+  --yellow: #F5E747;
+  --bg: #691B32;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Hind Siliguri', sans-serif;
+  background-color: var(--bg);
+  color: var(--white);
+}
+
+h1{
+  color: var(--yellow);
+}
+
+header .container{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 10px 30px; */
+  position: absolute;
+}
+
+header .logo{
+
+}
+
+header nav a{
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+  font-weight: bold;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+header nav a::before {
+  position: absolute;
+  content: attr(data-content); /* Prints the value of the attribute */
+  top: 0;
+  left: 0;
+  color:  var(--pink);
+  overflow: hidden;
+  transition: width 300ms ease;
+  width: 0;
+  white-space: nowrap;
+}
+
+header  nav a:hover::before{
+  width: 100%;
+}
+
+.filme-principal{
+  font-size: 16px;
+  background: linear-gradient(0deg, rgba(105,27,50,1) 0%, rgba(105,27,50,0.5) 30%), url('/img/capa.jpg');
+  height: 600px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.descricao{
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.titulo{
+  font-size: 40px;
+  margin-top: 15%;
+}
+
+.botao{
+  background-color: rgba(231, 60, 112, 0.5);
+  border: 0;
+  color:  var(--white);
+  padding: 15px 30px;
+  margin-right: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.botao:hover{
+  background-color: var(--white);
+  color:  var(--pink);
+}
+
+.botao i {
+  margin-right: 8px;
+}
+
+.container{
+  padding: 10px 30px
+}
+
+.box-filme{
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.carrossel-filmes{
+  margin-top: 10px;
+}
